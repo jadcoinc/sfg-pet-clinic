@@ -79,8 +79,4 @@
 		</plugins>
 	</build>
 
-	<packaging>pom</packaging>
-	<modules>
-		<module>pet-clinic-data</module>
-	</modules>
 </project>
