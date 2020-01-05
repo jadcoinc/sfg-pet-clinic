@@ -14,6 +14,8 @@
 	<name>sfg-pet-clinic</name>
 	<description>SFG Pet Clinic Project</description>
 
+	<packaging>pom</packaging>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -79,4 +81,8 @@
 		</plugins>
 	</build>
 
+	<modules>
+		<module>pet-clinic-data</module>
+		<module>pet-clinic-web</module>
+	</modules>
 </project>
