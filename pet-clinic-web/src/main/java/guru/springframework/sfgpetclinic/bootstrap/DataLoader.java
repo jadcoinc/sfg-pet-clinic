@@ -19,9 +19,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     
-    public DataLoader() {
-        this.vetService = new VetServiceMap();
-        this.ownerService = new OwnerServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.vetService = vetService;
+        this.ownerService = ownerService;
     }
     
     @Override
@@ -38,7 +38,7 @@ public class DataLoader implements CommandLineRunner {
         owner2.setLastName("Glenanne");
         ownerService.save(owner2);
         
-        LOGGER.info("Loaded owners...");
+        LOGGER.info("***** Loaded owners...: {}", ((OwnerServiceMap) ownerService).findAll());
         
         Vet vet1 = new Vet();
         vet1.setId(1L);
@@ -52,6 +52,6 @@ public class DataLoader implements CommandLineRunner {
         vet2.setLastName("Porter");
         vetService.save(vet2);
         
-        LOGGER.info("Loaded vets...");
+        LOGGER.info("***** Loaded vets...: {}", ((VetServiceMap) vetService).findAll());
     }
 }
