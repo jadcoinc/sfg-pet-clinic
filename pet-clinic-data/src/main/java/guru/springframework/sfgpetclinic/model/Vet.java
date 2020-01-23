@@ -15,4 +15,10 @@ public class Vet extends Person {
 		this.specialities = specialities;
 	}
 
+	@Override
+	public String toString() {
+//		return "Vet [specialities=" + specialities + "]";
+		return "Vet [name=" + super.getFirstName() + super.getLastName() + ", specialities=" + specialities + "]";
+	}
+
 }

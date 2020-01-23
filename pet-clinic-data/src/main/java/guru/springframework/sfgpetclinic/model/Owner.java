@@ -42,4 +42,9 @@ public class Owner extends Person {
 		this.pets = pets;
 	}
 
+	@Override
+	public String toString() {
+		return "Owner [name=" + super.getFirstName() + super.getLastName() + ", address=" + address + ", city=" + city + 
+				", telephone=" + telephone + "]";
+	}
 }

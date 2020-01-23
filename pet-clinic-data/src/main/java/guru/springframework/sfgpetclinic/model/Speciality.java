@@ -12,4 +12,8 @@ public class Speciality extends BaseEntity {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "Speciality [description=" + description + "]";
+	}
 }
