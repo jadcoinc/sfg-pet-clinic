@@ -10,8 +10,13 @@ public class IndexController {
 
 	@RequestMapping(value= {"", "/", "index", "index.html"}, method = RequestMethod.GET)
 	public String index(Model model) {
-//		model.addAttribute("welcome", "Index Page");
+		model.addAttribute("welcome", "Index Page");
 		return "index";
 	}
+	
+    @RequestMapping(value="/oups", method=RequestMethod.GET)
+    public String oupsHandler(Model model) {
+    	return "notimplemented";
+    }
 	
 }
